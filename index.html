@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Project AYE AYE MADAM 🫡</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+
+<body>
+
+    <!-- ==================================================
+         ATMOSPHERE & PETALS
+    =================================================== -->
+    <div id="atmosphere" aria-hidden="true">
+        <div class="background"></div>
+        <div id="sparkle-layer"></div>
+    </div>
+
+    <div id="petal-layer" aria-hidden="true"></div>
+
+    <!-- ==================================================
+         COUNTDOWN SCREEN
+    =================================================== -->
+    <main id="countdown-screen">
+        <section class="glass-card" aria-label="Birthday countdown card">
+
+            <!-- Heading -->
+            <header class="countdown-header">
+                <h1>
+                    <span class="heading-flower" aria-hidden="true">🌸</span>
+                    A Special Day Is Coming
+                </h1>
+                <p class="countdown-subtitle">Just a little more time...</p>
+                <div class="heading-heart" aria-hidden="true">♡</div>
+            </header>
+
+            <!-- Countdown Envelopes -->
+            <section class="countdown-container" aria-label="Birthday countdown">
+                <article class="time-box envelope" data-surface="days">
+                    <div class="envelope-flap" aria-hidden="true"></div>
+                    <div class="envelope-fold" aria-hidden="true"></div>
+                    <div class="wax-seal" aria-hidden="true"><span>♥</span></div>
+                    <div class="time-content">
+                        <span id="days" class="time-number">00</span>
+                        <small>Days</small>
+                    </div>
+                </article>
+
+                <article class="time-box envelope" data-surface="hours">
+                    <div class="envelope-flap" aria-hidden="true"></div>
+                    <div class="envelope-fold" aria-hidden="true"></div>
+                    <div class="wax-seal" aria-hidden="true"><span>♥</span></div>
+                    <div class="time-content">
+                        <span id="hours" class="time-number">00</span>
+                        <small>Hours</small>
+                    </div>
+                </article>
+
+                <article class="time-box envelope" data-surface="minutes">
+                    <div class="envelope-flap" aria-hidden="true"></div>
+                    <div class="envelope-fold" aria-hidden="true"></div>
+                    <div class="wax-seal" aria-hidden="true"><span>♥</span></div>
+                    <div class="time-content">
+                        <span id="minutes" class="time-number">00</span>
+                        <small>Minutes</small>
+                    </div>
+                </article>
+
+                <article class="time-box envelope" data-surface="seconds">
+                    <div class="envelope-flap" aria-hidden="true"></div>
+                    <div class="envelope-fold" aria-hidden="true"></div>
+                    <div class="wax-seal" aria-hidden="true"><span>♥</span></div>
+                    <div class="time-content">
+                        <span id="seconds" class="time-number">00</span>
+                        <small>Seconds</small>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Waiting Message -->
+            <p id="countdown-text">
+                This little project is patiently waiting for the right moment.
+            </p>
+
+            <!-- Hero Note -->
+            <article class="hero-note" data-surface="hero-note">
+                <div class="note-paper-shine" aria-hidden="true"></div>
+                <div class="note-title">
+                    <svg class="ui-icon ui-icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="5" width="18" height="14" rx="3"></rect>
+                        <path d="M4 7l8 6 8-6"></path>
+                    </svg>
+                    <span>A Message From Your HERO</span>
+                </div>
+                <div class="note-content">
+                    <p>Be ready to <strong>LOSE THE BET!</strong> ❤️</p>
+                    <p>Your HERO has a surprise planned for his beloved. 😍</p>
+                </div>
+            </article>
+
+            <!-- Interactive Unlock Pill -->
+            <div class="unlock-wrapper">
+                <button
+                    type="button"
+                    class="unlock-box"
+                    id="unlock-pill"
+                    aria-describedby="unlock-toast"
+                >
+                    <svg class="ui-icon ui-icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="5" y="11" width="14" height="10" rx="2.5"></rect>
+                        <path d="M8 11V7.5a4 4 0 0 1 8 0V11"></path>
+                    </svg>
+                    <span>Unlocks on <strong>16 January</strong></span>
+                </button>
+                <p id="unlock-toast" class="unlock-toast" role="status" aria-live="polite"></p>
+            </div>
+
+            <!-- Footer Message -->
+            <footer class="wait-message">
+                <div class="wait-divider" aria-hidden="true">
+                    <span class="line"></span>
+                    <span class="footer-heart">♥</span>
+                    <span class="line"></span>
+                </div>
+                <p>SOME MOMENTS ARE WORTH THE WAIT</p>
+            </footer>
+
+        </section>
+    </main>
+
+    <!-- ==================================================
+         LOADER
+    =================================================== -->
+    <section id="loader" aria-label="Unlocking birthday surprise">
+        <div class="background" aria-hidden="true"></div>
+
+        <div class="loader-card">
+            <div class="emoji" aria-hidden="true">🫡</div>
+            <h1>PROJECT</h1>
+            <h2>AYE AYE MADAM!!</h2>
+            <p id="loadingMessage">Initializing Mission...</p>
+
+            <div class="progress" aria-hidden="true">
+                <div class="progress-bar"></div>
+            </div>
+
+            <div class="status">
+                Mission ID : AAM-1601<br>
+                Status : Active
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================================================
+         BIRTHDAY EXPERIENCE — LETTER COLLECTION & GALLERY
+    =================================================== -->
+    <section id="hero" class="birthday-experience">
+
+        <header class="birthday-header">
+            <div class="birthday-decoration" aria-hidden="true">✦ ♡ ✦</div>
+            <h1>Happy Birthday, My Love! 🌸</h1>
+            <p>A little collection of words, memories and love 💗</p>
+        </header>
+
+        <div id="letter-collection">
+            <div class="letter-heading">
+                <span aria-hidden="true">💌</span>
+                <h2>Letters From Your HERO</h2>
+                <p>Three little envelopes, filled with love...</p>
+            </div>
+
+            <div class="letter-grid">
+                <button class="letter-envelope" type="button" data-letter="birthday-letter">
+                    <div class="envelope-flap" aria-hidden="true"></div>
+                    <span class="envelope-icon" aria-hidden="true">🎂</span>
+                    <strong>Birthday Letter</strong>
+                    <small>A little something for your special day</small>
+                    <span class="open-hint">TAP TO OPEN ✨</span>
+                </button>
+
+                <button class="letter-envelope" type="button" data-letter="miss-you-letter">
+                    <div class="envelope-flap" aria-hidden="true"></div>
+                    <span class="envelope-icon" aria-hidden="true">💗</span>
+                    <strong>A Letter About Missing You</strong>
+                    <small>Words I've been keeping in my heart</small>
+                    <span class="open-hint">TAP TO OPEN ✨</span>
+                </button>
+
+                <button class="letter-envelope" type="button" data-letter="boards-letter">
+                    <div class="envelope-flap" aria-hidden="true"></div>
+                    <span class="envelope-icon" aria-hidden="true">📜</span>
+                    <strong>For Your Board Exams</strong>
+                    <small>A little encouragement for your journey</small>
+                    <span class="open-hint">TAP TO OPEN ✨</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- LETTER 1: BIRTHDAY -->
+        <article class="letter-paper" id="birthday-letter" hidden>
+            <button class="letter-close" type="button" aria-label="Close letter">×</button>
+            <div class="paper-decoration" aria-hidden="true">🌸 ✨ 🌸</div>
+            <h2>Happy Birthday, My Sweetheart!</h2>
+            <div class="letter-body">
+                <p>Happiest Birthday MY SWEETHEART! 💗</p>
+
+                <p>Waiting for ts day for so long and today it is, my love 💕! I know it's not easy for you nor it is for me to be apart but I do feel that it wasn't your choice at all. I hope aap dawaiyan lena nahi bhulti hogi, waqt par khaana khate honge and paani bhi yaad se pi lete honge.</p>
+
+                <p>Yk what? I missed you every single day. In fact I've got tears while writing ts. Everyday I would up, I thought ki aap kaise honge. Jab mandir jaata toh sabse pehle aapke liye prayers karta ki, aap khush raho humesha...🥺🤍</p>
+
+                <p>You got all the love and care. You're worthy of my love. You stay in my heart and prayers 🥹. I promise to be yours forever, Pooja ❤️.You complete me 💐... You truly do 🥹... I love you, forever 💗🥹!</p>
+
+                <p>Happy Birthday 🎂🥹</p>
+            </div>
+        </article>
+
+        <!-- LETTER 2: MISSING YOU -->
+        <article class="letter-paper" id="miss-you-letter" hidden>
+            <button class="letter-close" type="button" aria-label="Close letter">×</button>
+            <div class="paper-decoration" aria-hidden="true">💗 ✨ 💗</div>
+            <h2>A Letter From My Heart</h2>
+            <div class="letter-body">
+                <p>My love 💕💕💕,</p>
+
+                <p>I Love You 🥹🫶✨! You wanna hear a thousand times, I will say more than that, that I Love You! Everyday when I wake up, I feel like a part of me isn't with me... And that's you 💗. Most of the times, tears fall from my eyes because I miss you everyday. I miss you reminding me everyday to take care of myself, I miss your kisses and hugs, I miss your I love You texts and I miss my girl who completes me 🥹💖💝. Kisses and hugs to my Cutie Pie 🥰! And a reminder that you're special, as you're ✨💝! You don't need to be a different girl, you don't need to be at your best version to get my love ✨🫶! You're always gonna be same for me Pooja 🎀! Once again, Happy Birthday my heart ❤️! You're very special to me 🥹 💖! I Love You 💗✨!</p>
+
+                <p>MWAHHHHHHHHHH 😘 😘 😘!</p>
+            </div>
+        </article>
+
+        <!-- LETTER 3: BOARD EXAM ENCOURAGEMENT -->
+        <article class="letter-paper boards-paper" id="boards-letter" hidden>
+            <button class="letter-close" type="button" aria-label="Close letter">×</button>
+            <div class="paper-decoration" aria-hidden="true">📚 🌷 ✨</div>
+            <h2>For Your Board Exams 💗</h2>
+            <div class="letter-body">
+                <p>My dear 💖,</p>
+
+                <p>As your boards datesheet is out and ofc you're exams will start in a month now, I want you to remember that your worth doesn't depends on a marksheet or anything else. You always have to remember that you're capable of doing things your way. One of the things I learnt this year is that you don't decide your future in a day. You make it better everyday by staying consistent and smiling at the worst days of your life. Don't let your smile 😊 fade bcuz of an exam. Let exam be important but don't let an exam decide your worth. A piece of paper 📜 doesn't reflect your hardwork and dedication, when you were keep working on the hardest days of your life. Best of Luck 🤞 for your exams and I'll be waiting for you after your boards ends ✨💗!</p>
+
+                <p>Love you my sweetheart 🫶😘, and happy birthday 🎈 🎂!</p>
+            </div>
+        </article>
+
+        <!-- HANGING PHOTO GALLERY -->
+        <section class="memory-wall" id="memory-wall" aria-labelledby="memory-wall-title">
+            <div class="memory-wall-heading">
+                <span class="memory-wall-flourish" aria-hidden="true">✦ ♡ ✦</span>
+                <h2 id="memory-wall-title">Little Moments, Beautiful Memories</h2>
+                <p>A tiny wall of moments worth keeping 🌷</p>
+            </div>
+
+            <div class="hanging-gallery">
+                <figure class="hanging-frame frame-one" tabindex="0" role="button" aria-label="View photo: little sunshine">
+                    <span class="frame-string" aria-hidden="true"></span>
+                    <div class="frame-photo">
+                        <img src="assets/photos/pooja-photo-01.jpg" alt="A favourite photo" loading="lazy">
+                    </div>
+                    <figcaption>little sunshine ☀️</figcaption>
+                </figure>
+
+                <figure class="hanging-frame frame-two" tabindex="0" role="button" aria-label="View photo: just being you">
+                    <span class="frame-string" aria-hidden="true"></span>
+                    <div class="frame-photo">
+                        <img src="assets/photos/pooja-photo-02.jpg" alt="A lovely memory" loading="lazy">
+                    </div>
+                    <figcaption>just being you ♡</figcaption>
+                </figure>
+
+                <figure class="hanging-frame frame-three" tabindex="0" role="button" aria-label="View photo: soft little moments">
+                    <span class="frame-string" aria-hidden="true"></span>
+                    <div class="frame-photo">
+                        <img src="assets/photos/pooja-photo-03.jpg" alt="A moment outdoors" loading="lazy">
+                    </div>
+                    <figcaption>soft little moments</figcaption>
+                </figure>
+
+                <figure class="hanging-frame frame-four" tabindex="0" role="button" aria-label="View photo: a rose for you">
+                    <span class="frame-string" aria-hidden="true"></span>
+                    <div class="frame-photo">
+                        <img src="assets/photos/pooja-photo-04.jpg" alt="A memory with a rose" loading="lazy">
+                    </div>
+                    <figcaption>a rose for you 🌹</figcaption>
+                </figure>
+
+                <figure class="hanging-frame frame-five" tabindex="0" role="button" aria-label="View photo: forever in a frame">
+                    <span class="frame-string" aria-hidden="true"></span>
+                    <div class="frame-photo">
+                        <img src="assets/photos/pooja-photo-05.jpg" alt="A vintage-style memory" loading="lazy">
+                    </div>
+                    <figcaption>forever in a frame</figcaption>
+                </figure>
+            </div>
+
+            <p class="memory-wall-footer">Some memories deserve their own little place. 💗</p>
+        </section>
+
+    </section>
+
+    <!-- Photo Lightbox Modal -->
+    <div id="photo-lightbox" class="photo-lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo preview">
+        <div class="lightbox-card">
+            <button type="button" class="lightbox-close" aria-label="Close photo">×</button>
+            <img id="lightbox-img" src="" alt="">
+            <p id="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+
+</html>
